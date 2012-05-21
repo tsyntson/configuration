@@ -96,7 +96,8 @@ set foldmethod=indent
 " expr   按表达式折叠
 
 set	helplang=cn
-set tags=/home/tsyntson/backup/tags
+"set tags=/home/tsyntson/backup/tags
+"打开文件类型检测及智能补全
 filetype plugin indent on
 set completeopt=longest,menu
 
@@ -108,7 +109,7 @@ set autochdir
 "开启新行时使用智能自动缩进
 set smartindent
 "设定命令行数及状态栏
-set cmdheight=2
+set cmdheight=1
 set laststatus=2
 
 "工作目录随文件变
@@ -173,3 +174,13 @@ function GuiTabLabel()
 "map	<C-K><C-W>k<C-W>_
 "允许拆分窗口将大小减少至一个单独的行
 set	wmh=0
+
+"for taglist
+let	Tlist_Show_One_File=1
+let	Tlist_Exit_OnlyWindow=1
+"for MiniBufExplorer
+let	g:miniBufExplMapWindowNavArrows=1
+let	g:miniBufExplMapCtabSwitchBufs=1
+"for SuperTab
+let g:SuperTabRetainCompletionType=2
+let g:SuperTabDefaultCompletionType="<C-X><C-P>"
